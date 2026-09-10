@@ -1,30 +1,56 @@
-#root {
-  display: flex; 
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
-body{ 
-  margin: 0; 
-  padding: 0; 
-  display: flex;
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
 }
 
-.header{
-  display: flex;
-  width: 100vw;
+.header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   height: 295px;
   background: linear-gradient(to top, #196B78, #138496);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.textsInH{
-  margin: auto;
-  color: #CCF8FF;
+.textsInH { 
+  color: #CCF8FF; 
+  text-align: center;
+ }
+
+.bigText  { 
+  font-size: 72px; 
+  line-height: 1.1; 
 }
 
-.bigText{
-  font-size: 72px;
+.smallText{ 
+  font-size: 21px; 
 }
 
-.litleText{
+.inpText {
+  position: relative;
+  z-index: 2;
+  width: 820px;
+  height: 64px;
+  margin: -32px auto 0;
+}
 
+.inpText input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
   font-size: 21px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

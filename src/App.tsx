@@ -10,6 +10,9 @@ function App(){
       </div>
       
     </div>
+    <div className={styles.inpText}>
+      <input type="text" placeholder='l'/>
+    </div>
     </>
   )
 }
