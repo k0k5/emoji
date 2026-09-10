@@ -1,0 +1,30 @@
+#root {
+  display: flex; 
+}
+
+body{ 
+  margin: 0; 
+  padding: 0; 
+  display: flex;
+}
+
+.header{
+  display: flex;
+  width: 100vw;
+  height: 295px;
+  background: linear-gradient(to top, #196B78, #138496);
+}
+
+.textsInH{
+  margin: auto;
+  color: #CCF8FF;
+}
+
+.bigText{
+  font-size: 72px;
+}
+
+.litleText{
+
+  font-size: 21px;
+}
