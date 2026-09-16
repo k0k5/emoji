@@ -11,16 +11,34 @@ function App(){
       
     </div>
     <div className={styles.inpText}>
-      <input type="text" placeholder='l'/>
+      <input type="text" placeholder='Placeholder'/>
+    </div>
+    <div className={styles.emojis}>
+
+      <div className={styles.card}>
+        <div className={styles.icon}>💯</div>
+        <div className={styles.emName}>100</div>
+        <div className={styles.emDiscr}>Hundred, points, symbol, wow, win, perfect, parties</div>  
+      </div>
+
+      <div className={styles.card}>
+        <div className={styles.inCard}>
+            <div className={styles.icon}>🔢</div>
+            <div className={styles.emName}>1234</div>
+            <div className={styles.emDiscr}>input symbol for numbers symbol</div>
+        </div>
+
+      </div>  
+
+      <div className={styles.card}>
+        <div className={styles.icon}>🔢</div>
+        <div className={styles.emName}>1234</div>
+        <div className={styles.emDiscr}>input symbol for numbers symbol</div>  
+      </div>
+
     </div>
     </>
   )
 }
 
 export default App
-
-
-// header 295
-// текст заголовок - 72пх
-// маленький текст 21пх
-// плейсхолдер 64 820

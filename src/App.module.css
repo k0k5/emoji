@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 html, body, #root {
   margin: 0;
@@ -19,6 +20,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
 }
 
 .textsInH { 
@@ -28,7 +31,6 @@ body {
 
 .bigText  { 
   font-size: 72px; 
-  line-height: 1.1; 
 }
 
 .smallText{ 
@@ -48,9 +50,38 @@ body {
   height: 100%;
   padding: 0 20px;
   font-size: 21px;
-  border: none;
   outline: none;
-  border-radius: 8px;
+  border-radius: 4px;
+  border: #CED4DA;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color:#ABB5BE;
+}
+
+.emojis{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card{
+  height: 186px;
+  width: 316px;
+  background: #FFFFFF;
+}
+
+.icon{
+  font-size: 48px;
+  margin: 24px 134px ;
+}
+
+.emName{
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.emDiscr{
+  font-size: 12px;
+}
+
+.inCard{
+
 }
