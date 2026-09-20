@@ -4,10 +4,12 @@ html, body, #root {
   margin: 0;
   padding: 0;
   display: block;
+    font-family: "Inter", sans-serif;
+
 }
 
 body {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   background: #f5f5f5;
 }
 
@@ -31,6 +33,7 @@ body {
 
 .bigText  { 
   font-size: 72px; 
+  
 }
 
 .smallText{ 
@@ -60,28 +63,40 @@ body {
 .emojis{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 24px;              /* отступы между карточками */
+  justify-items: center;  /* центрируем карточки в ячейках */
+  max-width: 1100px;      /* чтобы не растягивалось на весь экран */
+  margin: 47px auto 0;    /* 80px сверху + центрирование по горизонтали */
+  padding: 0 20px;
 }
 
 .card{
   height: 186px;
   width: 316px;
   background: #FFFFFF;
+  display: flex;
 }
 
 .icon{
   font-size: 48px;
   margin: 24px 134px ;
+  margin-bottom: 0;
 }
 
 .emName{
   font-size: 28px;
   text-decoration: underline;
+  margin-top: 18px;
+  
 }
 
 .emDiscr{
   font-size: 12px;
+  margin-top: 12px;
 }
 
 .inCard{
-
+  color: #000000;
+  align-items: center; 
+  text-align: center; 
 }
