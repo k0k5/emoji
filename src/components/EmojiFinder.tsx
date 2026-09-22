@@ -1,6 +1,5 @@
 import React, {useState, useEffect, use} from "react";
 import { getEmojis, type IEmojiItem } from "../api/emojiApi";
-import e from "express";
 
 
 const App: React.FC = ()=>{
