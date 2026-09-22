@@ -1,5 +1,6 @@
 import React, {useState, useEffect, use} from "react";
 import { getEmojis, type IEmojiItem } from "../api/emojiApi";
+import e from "express";
 
 
 const App: React.FC = ()=>{
@@ -34,34 +35,59 @@ const App: React.FC = ()=>{
     }
 
     return(
-        <div style={}>
+        <div style={{maxWidth: '800px', margin: '0 auto', padding: '20px'}}>
             <h1>Поиск эмодзи</h1>
             {}
-            <div style={}>
+            <div style={{marginBottom: '30px'}}>
                 <input 
                 type="text" 
                 placeholder="Введите название или ключевое слово..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                style={}
+                style={{padding: '10px', width: '100%', boxSizing: 'border-box'}}
                 />
                 {searchTerm && (
                     <button
                         onClick={() => setSearchTerm('')}
-                        style={}
+                        style={{marginTop: '10px', cursor: 'pointer'}}
                     >
                         Очистить поиск
                     </button>
                 )}
             </div>
-            {loading ? <div style={}>Загрузка эмодзи</div> : null}
+            {loading ? <div style={{padding: '20px', textAlign: 'center'}}>Загрузка эмодзи</div> : null}
             {}
-            <div style={}>
+            <div style={{display: 'grid', gridTemplate: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '15px'}}>
                 {emojis.length === 0 ? (
-                    }
+                    <p>Эмодзи не найден</p>    
+                ) : (
+                    emojis.map((emoji)=>(
+                        <div
+                            key={emoji.id}
+                            style={{
+                                border: '1px solid #ddd',
+                                padding: '15px',
+                                borderRadius: '8px',
+                                textAlign: 'center',
+                                backgroundColor: '#f9f9f9',
+                                transition: 'transfom 0.2s'
+                            }}
+                            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                        >
+                            {}
+                            <div style={{fontSize: '40px', lineHeight: '1'}}>{emoji.emoji}</div>
+                            <h3 style={{margin: "10px 0 5px", fontSize: '16px'}}>{emoji.title}</h3>
+                            <small style={{color: '#666', display: 'block'}}>
+                                {emoji.keywords}
+                            </small>
+                        </div>
+                    ))
+                )}
 
             </div>
         </div>
-    )
+    );
+};
 
-}
+export default App;
