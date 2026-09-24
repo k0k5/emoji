@@ -9,7 +9,6 @@ html, body, #root {
 }
 
 body {
-  /* font-family: sans-serif; */
   background: #f5f5f5;
 }
 
@@ -63,10 +62,10 @@ body {
 .emojis{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;              /* отступы между карточками */
-  justify-items: center;  /* центрируем карточки в ячейках */
-  max-width: 1100px;      /* чтобы не растягивалось на весь экран */
-  margin: 47px auto 0;    /* 80px сверху + центрирование по горизонтали */
+  gap: 24px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 47px auto 0;
   padding: 0 20px;
 }
 

@@ -29,27 +29,25 @@ function searchEmojis(query, data) {
 
   const lowerQuery = query.toLowerCase();
 
+
   return data.filter((emoji) => {
     const matchesTitle = emoji.title.toLowerCase().includes(lowerQuery);
-    
     const matchesKeywords = emoji.keywords.toLowerCase().includes(lowerQuery);
-
+    
     return matchesTitle || matchesKeywords;
   });
 }
 
+
 app.get('/api/emojis', (req, res) => {
   const { q } = req.query; 
-  
-
   let result = searchEmojis(q, emojisData);
-
-
   const limit = 20;
   result = result.slice(0, limit);
 
   res.json(result);
 });
+
 
 app.listen(PORT, () => {
   console.log(`Сервер запущен на http://localhost:${PORT}`);
